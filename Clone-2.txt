@@ -1,0 +1,38 @@
+
+<nav></nav>
+navigation은 보통 ul로 나눠지고 그 안에 많은 li들로 구성된다.
+그리고 li는 a를 가질거다
+검색엔진 구글도 navigation을 찾아서 ul의 li에 있는 link를 가져오게끔 설정되어있다.
+
+단축키:
+nav>ul>li*4>a
+nav안에 ul 생성, li 4개 생성, li 각각에 a 생성
+
+.nav__link {
+  color: inherit;
+  text-decoration: none;
+}
+reset파일에 해두면 전체적으로 초기화 됨
+
+navigation 바 아래에 고정시키는 방법
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box; <- 마법의 한줄 ㅋㅋ
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  border-top: 1px solid rgba(126, 126, 126, 0.3);
+}
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav__link {
+  color: #2e363e;
+}
+
+navigation 바 아래에 고정시키는 방법.
+* box-sizing : border-box; 
+"CSS야 내가 패딩을 줘도 신경쓰지 말고 박스 사이즈를 늘리지 말아줘" 라고 보면 됨
